@@ -29,4 +29,12 @@
   &__logo-box:hover &__logo {
     animation: moveInRight 1.2s ease-in;
   }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
