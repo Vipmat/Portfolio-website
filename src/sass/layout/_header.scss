@@ -12,5 +12,21 @@
   background-position: top;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 2rem;
+    animation: moveInRight 1.2s ease-in;
+  }
+
+  &__logo {
+    height: 20rem;
+  }
+
+  &__logo-box:hover &__logo {
+    animation: moveInRight 1.2s ease-in;
+  }
 }

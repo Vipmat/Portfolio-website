@@ -1,3 +1,13 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -12,7 +22,7 @@ body {
   box-sizing: border-box; }
 
 body {
-  padding: 3rem; }
+  padding: 2rem; }
 
 .header {
   height: 95vh;
@@ -20,4 +30,14 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 2rem;
+    animation: moveInRight 1.2s ease-in; }
+  .header__logo {
+    height: 20rem; }
+  .header__logo-box:hover .header__logo {
+    animation: moveInRight 1.2s ease-in; }
