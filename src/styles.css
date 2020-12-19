@@ -8,6 +8,14 @@
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -38,7 +46,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
-    animation: moveInRight 1.5s ease-out; }
+    animation: moveInRight 3.5s ease-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -66,6 +74,21 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.btn--animated {
+  animation: moveInButton 0.5s ease-out 0.75;
+  animation-fill-mode: backwards; }
 
 .header {
   height: 95vh;

@@ -36,4 +36,21 @@
       background-color: $color-white;
     }
   }
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInButton 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+  }
 }
