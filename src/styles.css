@@ -98,7 +98,6 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header__logo-box {
-    position: absolute;
     display: inline-block;
     top: 2px;
     left: 2rem;
@@ -107,9 +106,41 @@ body {
     height: 20rem; }
   .header__logo-box:hover .header__logo {
     animation: moveInRight 1.2s ease-in; }
+  .header__navigation {
+    padding: 2rem;
+    display: inline-block; }
+  .header__list {
+    list-style: none; }
+  .header__item {
+    display: inline-block; }
+    .header__item:not(:last-child) {
+      margin-right: 2.5rem; }
+  .header__link:link, .header__link:visited {
+    color: orangered;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 2.5rem; }
   .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: block; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
