@@ -51,11 +51,29 @@
   &__link {
     &:link,
     &:visited {
-      color: orangered;
+      color: $color-grey-light-1;
       text-decoration: none;
       text-transform: uppercase;
+      text-decoration: none;
       display: inline-block;
       font-size: 2.5rem;
+      font-weight: 400;
+      box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 230%;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
     }
   }
 
